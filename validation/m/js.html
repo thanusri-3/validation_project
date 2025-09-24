@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/808f5c8bda.js" crossorigin="anonymous"></script>
+    <title>Validation</title>
+</head>
+<body>
+    
+    <header class="container">
+        <!-- Call validateForm on submit -->
+        <form onsubmit="return validateForm(event)">
+            <div class="Name">
+                <label for="name">Name</label><br>
+                <input type="text" id="name" required placeholder="Enter your Name">
+            </div>
+            <div class="mail">
+                <label for="email">E-mail</label><br>
+                <input type="email" id ="email" placeholder="Enter your Email" required>
+            </div>
+            <div class="number">
+                <label for="phone-number">Phone number</label><br>
+                <input type="number" id="phone-number" placeholder="Enter your phone number" required> 
+            </div>
+            <div class="password">
+                <label for="password">Password</label><br>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div> 
+            <div class="confirmpassword">
+                <label for="confirmpassword">Confirm Password</label><br>
+                <input type="text" id="confirmpassword" required onkeyup="checkPassword()">
+            </div> 
+            <p id="message">Demo text</p>
+            <div class="submit">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </header>
+    
+    <script src="script.js"></script>
+</body>
+</html>
